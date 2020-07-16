@@ -11,3 +11,10 @@ public class GuessGame {
 				+ "\n HINT : I am a language"
 				+ "\n Guess my name!!");
 		String secretword = "java";
+		String guess = "";
+		int guesscount = 0;
+		int limit = 2;
+		boolean outofguesses = false;
+		
+		 while (!guess.equals(secretword) && !outofguesses) {
+				
