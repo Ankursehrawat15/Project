@@ -7,8 +7,7 @@ public class GuessGame {
 	public static void main(String[] args) {
 		Scanner KeyboardInput = new Scanner(System.in);
 	     
-		System.out.println("Write once Run anywhere"
-				+ "\n HINT : I am a language"
+		System.out.println("A language which works on the basis of 'Write once Run anywhere'"
 				+ "\n Guess my name!!");
 		String secretword = "java";
 		String guess = "";
@@ -17,4 +16,23 @@ public class GuessGame {
 		boolean outofguesses = false;
 		
 		 while (!guess.equals(secretword) && !outofguesses) {
+				if(guesscount<limit) {
+					System.out.println("Enter your guess:");
+					guess = KeyboardInput.nextLine();
+					guesscount++;
+				}else {
+					outofguesses = true;
+					
+				}
+		 }
+				if(outofguesses) {
+					System.out.println("You lose,no more guess available");
+				}else {
+					System.out.println("You won");
+				}
+					
 				
+	}
+
+}
+
